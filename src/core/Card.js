@@ -94,24 +94,13 @@ const Card = ({
   };
   return (
     <div className="card">
-      <div className="card-header name">{product.name}</div>
       <div className="card-body">
         {shouldRedirect(redirect)}
         <ShowImage item={product} url="product" />
-        <p className="lead mt-2">
-          {product.description && product.description.substring(0, 10)}
-        </p>
-        <p className="black-10">
+        <div className="name">{product.name}</div>
+        <p>
           $
           { product.price }
-        </p>
-        <p className="black-9">
-          Category:
-          { product.category && product.category.name }
-        </p>
-        <p className="black-8">
-          Added on: &nbsp;
-          {moment(product.createdAt).fromNow()}
         </p>
         { showStock(product.quantity) }
         <br />

@@ -88,11 +88,8 @@ const Shop = () => {
 
   return (
     <Layout
-      title="Bookshop"
-      description="Search books"
-      className="container-fluid"
     >
-      <div className="row">
+      <div className="row container">
         <div className="col-3">
           <h4>Filter by category</h4>
           <ul>
@@ -108,7 +105,7 @@ const Shop = () => {
           />
         </div>
         <div className="col-9">
-          <h2 className="mb-4">Products</h2>
+          <h2 className="mb-4">Our Collections</h2>
           <div className="row">
             {
                         filteredResults.map((product, i) => (

@@ -3,21 +3,26 @@ import React from 'react';
 import { Link, withRouter } from 'react-router-dom';
 import { signout, isAuthenticated } from '../auth';
 import { itemTotal } from './cartHelpers';
+import { FaUserCircle } from "react-icons/fa";
+import { AiOutlineShoppingCart } from "react-icons/ai";
 
 const isActive = (history, path) => {
   if (history.location.pathname === path) {
-    return { color: '#ff9900' };
+    return { color: '#D3BDA6' };
   }
-  return { color: '#ffffff' };
+  return { color: '#62686D' };
 };
 const Menu = ({ history }) => (
-  <div>
-    <ul className="nav nav-tabs bg-primary">
+  <div className="menu">
+    <span>
+      Giovanni Fashion
+    </span>
+    <ul className="nav nav-tabs">
       <li className="nav-item">
         <Link className="nav-link" style={isActive(history, '/')} to="/">Home</Link>
       </li>
       <li className="nav-item">
-        <Link className="nav-link" style={isActive(history, '/shop')} to="/shop">Shop</Link>
+        <Link className="nav-link" style={isActive(history, '/shop')} to="/shop">Store</Link>
       </li>
       <li className="nav-item">
         <Link
@@ -25,7 +30,7 @@ const Menu = ({ history }) => (
           style={isActive(history, '/cart')}
           to="/cart"
         >
-          Cart
+          <AiOutlineShoppingCart />
           {' '}
           <sup>
             <small className="cart-badge">{ itemTotal() }</small>
@@ -64,10 +69,10 @@ const Menu = ({ history }) => (
                 && (
                 <>
                   <li className="nav-item">
-                    <Link className="nav-link" style={isActive(history, '/signin')} to="/signin">Signin</Link>
+                    <Link className="nav-link" style={isActive(history, '/signin')} to="/signin">Log In</Link>
                   </li>
                   <li className="nav-item">
-                    <Link className="nav-link" style={isActive(history, '/signup')} to="/signup">Signup</Link>
+                    <Link className="nav-link" style={isActive(history, '/signup')} to="/signup">Register</Link>
                   </li>
                 </>
                 )
@@ -79,12 +84,13 @@ const Menu = ({ history }) => (
                 <li className="nav-item">
                   <span
                     className="nav-link"
-                    style={{ cursor: 'pointer', color: '#fff' }}
+                    style={{ cursor: 'pointer', color: '#62686D' }}
                     onClick={() => signout(() => {
                       history.push('/');
                     })}
                   >
-                    Signout
+                  <FaUserCircle />&nbsp;
+                    Logout
                   </span>
                 </li>
                 )

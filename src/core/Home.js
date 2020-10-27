@@ -5,6 +5,7 @@
 /* eslint-disable no-console */
 
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import Layout from './Layout';
 import { getProducts } from './apiCore';
 import Card from './Card';
@@ -41,27 +42,37 @@ const Home = () => {
   }, []);
 
   return (
-    <Layout title="Bookshop" description="Node React E-commerce App" className="container-fluid">
-      <Search />
-      <h2 className="mb-4">New Arrivals</h2>
-      <div className="row">
-        {
-                        productsByArrival.map((product, i) => (
-                          <div key={i} className="col-4 mb-3">
-                            <Card product={product} />
-                          </div>
-                        ))
-                    }
+    <Layout className="container-fluid">
+      <div className="banner">
+         <div className="banner__actions">
+            <p>New Outerwear Collection</p>
+            <Link to="/shop">
+               <button>Shop Now</button>
+            </Link> 
+         </div>
       </div>
-      <h2 className="mb-4">Best Sellers</h2>
-      <div className="row">
-        {
-                        productsBySell.map((product, i) => (
-                          <div key={i} className="col-4 mb-3">
-                            <Card product={product} />
-                          </div>
-                        ))
-                    }
+      <Search />
+      <div className="products__display">
+        <h2 className="mb-4">New Arrivals</h2>
+        <div className="row">
+          {
+                          productsByArrival.map((product, i) => (
+                            <div key={i} className="col-4 mb-3">
+                              <Card product={product} />
+                            </div>
+                          ))
+                      }
+        </div>
+        <h2 className="mb-4">Best Sellers</h2>
+        <div className="row">
+          {
+                          productsBySell.map((product, i) => (
+                            <div key={i} className="col-4 mb-3">
+                              <Card product={product} />
+                            </div>
+                          ))
+                      }
+        </div>
       </div>
     </Layout>
   );
