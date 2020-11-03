@@ -1,7 +1,7 @@
 Giovanni-React-Frontend
 ================================================
 
-![Giovanni-fashion](giovanni shop.jpg)
+![giovanni shop](giovanni shop.jpg)
 ### Introduction
 
 Giovanni-react-frontend is the front-end of a Giovanni Fashion Online store.
