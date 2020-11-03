@@ -4,7 +4,7 @@ import '../styles.css';
 
 const Layout = ({ className, children}) => {
     return (
-        <div>
+        <div className="layout">
             <Menu />
             <div className={className}>{children}</div>
         </div>        
