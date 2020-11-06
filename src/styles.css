@@ -24,7 +24,7 @@
     font-weight: bold;
 }
 .banner{
-    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.166), rgba(0, 0, 0, 0.166)), url(https://images.pexels.com/photos/842811/pexels-photo-842811.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260);
+    
     height: 70vh;
     background-repeat: no-repeat;
     background-position: top;
@@ -53,12 +53,53 @@
     font-weight: bold;
     border-radius: 30px;
     font-size: 20px;
+    transition: all 0.6s;
+}
+.banner__actions button:hover{
+    transform: scale(1.02);
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.card{
+    min-width: 200px !important;
+    min-height: 400px !important;
+}
+.flex-column{
+    display: flex;
+    flex-direction: column;
+}
+.socials a{
+    font-size: 25px;
+    text-decoration: none;
+    color:black;
+}
+.socials a:hover{
+    color: rgba(0, 174, 255, 0.5);
+    cursor: pointer;
 }
 .menu{
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding:20px 10px;
+    flex-wrap: wrap;
+}
+.layout{
+    min-height: 80vh;
+}
+.footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    position: relative;
+}
+.bottom{
+    display: flex;
+    align-items: center;
+}
+.footer-menu{
+    display: flex;
+    flex-direction: column;
 }
 .products__display{
     background: #F0F0F0;

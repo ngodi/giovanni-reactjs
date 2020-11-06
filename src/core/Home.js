@@ -5,6 +5,7 @@
 /* eslint-disable no-console */
 
 import React, { useState, useEffect } from 'react';
+import BackgroundSlider from 'react-background-slider';
 import { Link } from 'react-router-dom';
 import Layout from './Layout';
 import { getProducts } from './apiCore';
@@ -50,7 +51,12 @@ const Home = () => {
                <button>Shop Now</button>
             </Link> 
          </div>
+         <BackgroundSlider
+                images={["https://images.pexels.com/photos/842811/pexels-photo-842811.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260", "https://images.pexels.com/photos/2772535/pexels-photo-2772535.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"]}
+                duration={5} transition={2}
+             />
       </div>
+    
       <Search />
       <div className="products__display">
         <h2 className="mb-4">New Arrivals</h2>

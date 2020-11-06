@@ -12,12 +12,12 @@ const isActive = (history, path) => {
   }
   return { color: '#62686D' };
 };
-const Menu = ({ history }) => (
+const Menu = ({ history, className }) => (
   <div className="menu">
     <span>
-      Giovanni Fashion
+     <strong> Giovanni Fashion</strong>
     </span>
-    <ul className="nav nav-tabs">
+    <ul className={`nav nav-tabs ${className}`}>
       <li className="nav-item">
         <Link className="nav-link" style={isActive(history, '/')} to="/">Home</Link>
       </li>
@@ -81,7 +81,8 @@ const Menu = ({ history }) => (
       {
                isAuthenticated()
                 && (
-                <li className="nav-item">
+                !className && (
+                  <li className="nav-item">
                   <span
                     className="nav-link"
                     style={{ cursor: 'pointer', color: '#62686D' }}
@@ -93,6 +94,7 @@ const Menu = ({ history }) => (
                     Logout
                   </span>
                 </li>
+                )
                 )
            }
 
