@@ -26,7 +26,7 @@ const Search = () => {
       } else {
         setData({ ...data, categories: data });
       }
-    });
+    })
   };
 
   useEffect(() => {
