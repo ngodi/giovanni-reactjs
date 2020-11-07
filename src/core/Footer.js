@@ -14,7 +14,7 @@ import { SiVisa, SiPaypal, SiMastercard } from 'react-icons/si';
                 <SiVisa />
                 <SiMastercard />
             </div>
-            <div className="col-md-3 col-sm-12 bottom">
+            <div className="bottom">
                 &copy;&nbsp;{date} Designed By Ngodi Albert
                 <SocialLinks />
             </div>

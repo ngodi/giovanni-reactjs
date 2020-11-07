@@ -6,7 +6,7 @@ const SocialLinks = () => {
     return (
         <div>
             <h5>Find Us</h5>
-            <div className="socials mt-3 flex-column">
+            <div className="socials mt-3 flex-row">
                 <Link to="#"><FaFacebook /></Link>
                 <Link to="#"><FaTwitterSquare /></Link>
                 <Link to="#"><FaInstagramSquare /></Link>
