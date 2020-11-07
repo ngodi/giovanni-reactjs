@@ -14,9 +14,11 @@ const isActive = (history, path) => {
 };
 const Menu = ({ history, className }) => (
   <div className="menu">
+    { className !== "footer-menu" && 
     <span>
-     <strong> Giovanni Fashion</strong>
+       <strong> Giovanni Fashion</strong>
     </span>
+     }
     <ul className={`nav nav-tabs ${className}`}>
       <li className="nav-item">
         <Link className="nav-link" style={isActive(history, '/')} to="/">Home</Link>
