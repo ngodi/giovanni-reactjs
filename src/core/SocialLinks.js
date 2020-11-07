@@ -3,6 +3,8 @@ import { FaFacebook, FaTwitterSquare, FaInstagramSquare } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 
 const SocialLinks = () => {
+    
+    const date = (new Date()).getFullYear();
     return (
         <div>
             <h5>Find Us</h5>
@@ -11,6 +13,7 @@ const SocialLinks = () => {
                 <Link to="#"><FaTwitterSquare /></Link>
                 <Link to="#"><FaInstagramSquare /></Link>
             </div>
+            &copy;&nbsp;{date} Designed By Ngodi Albert
         </div>
     )
 }

@@ -4,7 +4,6 @@ import SocialLinks from './SocialLinks';
 import { SiVisa, SiPaypal, SiMastercard } from 'react-icons/si';
 
  const Footer = () => {
-    const date = (new Date()).getFullYear();
     return (
         <footer className="footer">
             <Menu className="footer-menu"/>
@@ -14,7 +13,7 @@ import { SiVisa, SiPaypal, SiMastercard } from 'react-icons/si';
                 <SiVisa />
                 <SiMastercard />
             </div>
-            <div className="bottom">
+            <div className="bottom mt-5">
                 <SocialLinks />
             </div>
         </footer>
