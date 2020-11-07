@@ -8,7 +8,7 @@ import { SiVisa, SiPaypal, SiMastercard } from 'react-icons/si';
     return (
         <footer className="footer">
             <Menu className="footer-menu"/>
-            <div className="flex-column mt-3">
+            <div className="flex-column mt-5">
                 <h5>We accept</h5>
                 <SiPaypal />
                 <SiVisa />
